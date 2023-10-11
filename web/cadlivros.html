@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecad.css">
+    <title>Cadastrar Livros</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>Cadastrar Livros</h1>
+            <form method="post" action="salvar_livros.jsp">
+                <label for="codigo">Código:</label>
+                <input type="number" step="1" name="codigo" id="codigo" required>
+                
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" size="50" maxlength="50" required>
+
+                <label for="autor">Autor(a):</label>
+                <input type="text" name="autor" id="autor" size="50" maxlength="50" required>
+                
+                <label for="editora">Editora:</label>
+                <input type="text" name="editora" id="editora" size="50" maxlength="50" required>
+                
+                <label for="genero">Gênero:</label>
+                <input type="text" name="genero" id="genero" size="50" maxlength="50" required>
+
+                <label for="descricao">Descrição:</label>
+                <input type="text" name="descricao" id="descricao" size="50" maxlength="2000"  required>
+
+                <label for="preco">Preço:</label>
+                <input type="number" step="0.5" name="preco" id="preco" required>
+
+                <input type="submit" value="Salvar">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

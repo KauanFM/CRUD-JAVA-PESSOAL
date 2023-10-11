@@ -1,0 +1,41 @@
+
+table{
+    width: 70%;
+    background-color:background;
+    border: solid #c0c0c0 1px;
+    padding: 10px
+}
+
+*{
+    margin: 0 auto
+}
+
+th {
+    background-color:black;
+    color: white;
+    text-align: left;
+    padding: 5px 10px
+}
+
+td {
+    border: solid #ededed;
+    padding: 5px 10px
+}
+
+td a {
+    text-decoration: none;
+    color: black;
+    border: solid 2px;
+    padding: 5px 10px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+
+#ex{
+    text-decoration: none;
+    color: black;
+    border: solid 2px;
+    padding: 5px 10px;
+    background-color: red;
+    border-radius: 10px;
+}
