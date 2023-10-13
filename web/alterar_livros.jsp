@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Alterar Livro</title>
-        <link rel="stylesheet" href="carregalivro.css"/>
+        <link rel="stylesheet" href="stylecad.css"/>
     </head>
     <body> 
        <%

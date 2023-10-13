@@ -1,41 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-table{
-    width: 70%;
-    background-color:background;
-    border: solid #c0c0c0 1px;
-    padding: 10px
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-*{
-    margin: 0 auto
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(227, 239, 255);
+    background: radial-gradient(circle, rgba(227, 239, 255, 1) 0%, rgba(148, 190, 233, 1) 100%);
+}
+
+form {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+
+table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 th {
-    background-color:black;
-    color: white;
-    text-align: left;
-    padding: 5px 10px
+    background-color: #94bbf1;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #444;
 }
 
 td {
-    border: solid #ededed;
-    padding: 5px 10px
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    color: #333;
 }
 
 td a {
-    text-decoration: none;
-    color: black;
-    border: solid 2px;
+    background-color: #b30300;
+    color: #fff;
     padding: 5px 10px;
-    background-color: greenyellow;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#ex{
-    text-decoration: none;
-    color: black;
-    border: solid 2px;
-    padding: 5px 10px;
-    background-color: red;
-    border-radius: 10px;
+tr:nth-child(even) {
+    background-color: #f5f5f5;
 }
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+

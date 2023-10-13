@@ -8,7 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>carregalivro</title>
-        <link rel="stylesheet" href="stylecarregalivro.css"/>        
+        <link rel="stylesheet" href="stylecad.css"/>        
     </head>
     <body>
         <%
