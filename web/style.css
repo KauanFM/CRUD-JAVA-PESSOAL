@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
 * {
     margin: 0 auto;
 }
 
 header {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-    width: 95%;
-    background-color: #94bbf1;
+    width: 100%;
+    background-color: #89b5f2;
     color: white;
     padding: 10px
 }
@@ -18,27 +19,27 @@ header a {
 }
 
 nav {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 95%;
-    background-color: #d9d9d9;
+    width: 100%;
+    background-color: #94bbf1;
     padding: 10px;
     display: flex;
     align-items: center
 }
 
 nav a {
-    color: black;
-    text-decoration: none;
+    color: white;
+    text-decoration: none; 
+    font-size: 25px;
 }
 
 nav a:hover {
-    color: white;
+    color: grey;
 }
 
 main {
     background: rgb(227, 239, 255);
     background: radial-gradient(circle, rgba(227, 239, 255, 1) 0%, rgba(148, 190, 233, 1) 100%);
-    width: 95%;
+    width: 100%;
     height: 770px;
     padding: 10px;
     background-color: #ededed;
@@ -47,11 +48,11 @@ main {
 }
 
 footer {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 95%;
+    text-align: center;
+    width: 100%;
     padding: 10px;
-    background-color: #d9d9d9;
-    color: black;
+    background-color: #94bbf1;
+    color: white;
 }
 
 main iframe {
