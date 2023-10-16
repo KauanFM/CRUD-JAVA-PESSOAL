@@ -12,8 +12,10 @@
             <div class="container">
                 <h1>Pesquisar Livro</h1>
                 <form method="get" action="consultarlivro.jsp"> 
-                    <label for="nom">Nome do livro: </label>
-                    <input type="text" name="nome" id="nom" required>
+                    <label for="isbn">ISBN: </label>
+                    <input type="number" name="isbn" id="isbn" required>
+                    <label for="genero">Gênero </label>
+                    <input type="text" name="genero" id="genero"> 
                     <input type="submit" value="Consultar">
                 </form>
             </div>

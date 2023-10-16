@@ -8,7 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Livros Disponíveis</title>
-        <link rel="stylesheet" href="tabela.css"/>
+        <link rel="stylesheet" href="tabela1.css"/>
     </head>
     <body>
         
@@ -28,19 +28,22 @@
 
     <table border="1">
         <tr>
-            <th>Código</th><th>Nome</th><th>Autor(a)</th><th>Editora</th><th>Gênero</th><th>Descrição</th><th>Preço</th>
+            <th>Código</th><th>ISBN</th><th>Nome</th><th>Autor(a)</th><th>Editora</th><th>Gênero</th><th>Descrição</th><th>Preço</th><th>Exclusão</th><th>Alteração</th>
         </tr>                
         <%
             while (rs.next()) {
         %>
         <tr>
-            <td><%= rs.getInt("codL")%></td>
+            <td><%= rs.getInt("ID")%></td>
+            <td><%= rs.getInt("ISBN")%></td>
             <td><%= rs.getString("nome")%></td>
             <td><%= rs.getString("autor")%></td>
             <td><%= rs.getString("editora")%></td>
             <td><%= rs.getString("genero")%></td>
             <td><%= rs.getString("descricao")%></td>
             <td><%= rs.getString("preco")%></td>
+            <td><a href="exclivros.jsp?isbn=<%= rs.getString("isbn")%>" id="ex" >Excluir</a></td>
+            <td><a href="carregalivro.jsp?isbn=<%= rs.getString("isbn")%>" id="alt">Alterar</a></td>
         </tr>
         <%
             }

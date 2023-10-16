@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none
 }
 
 body {
@@ -58,7 +59,8 @@ td {
 }
 
 td a {
-    background-color: #b30300;
+    background-color: green;
+    text-decoration: none;
     color: #fff;
     padding: 5px 10px;
     border: none;
@@ -67,6 +69,11 @@ td a {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+#ex {
+    background-color: red;
+}
+
 
 tr:nth-child(even) {
     background-color: #f5f5f5;

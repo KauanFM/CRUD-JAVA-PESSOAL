@@ -18,29 +18,32 @@
 
     <%
             //Recebendo o nome do produto
-            String n = request.getParameter("nome");
-            
+            Integer isbn = Integer.parseInt(request.getParameter("isbn"));
+            String genero = request.getParameter("genero");
+
             try { // Tratamento de exceções
             
-                //Conexão com o Banco de Dados MySQL
+                //Conexão com o Banco de Dados MySQL    
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "jojokau8871");
                 
-                PreparedStatement st = conecta.prepareStatement("SELECT * FROM livro WHERE nome like ? ");
-                st.setString(1, "%" + n + "%");
+                PreparedStatement st = conecta.prepareStatement("SELECT * FROM livro WHERE ISBN like ? and genero like ? ");
+                st.setString(1, "%" + isbn + "%");
+                st.setString(2, "%" + genero + "%");
                 ResultSet rs = st.executeQuery();
                 
            
         %>
    <table border="1">
         <tr>
-            <th>Código</th><th>Nome</th><th>Autor(a)</th><th>Editora</th><th>Gênero</th><th>Descrição</th><th>Preço</th>
+            <th>Código</th><th>ISBN</th><th>Nome</th><th>Autor(a)</th><th>Editora</th><th>Gênero</th><th>Descrição</th><th>Preço</th>
         </tr>                
         <%
             while (rs.next()) {
         %>
         <tr>
-            <td><%= rs.getInt("codL")%></td>
+            <td><%= rs.getInt("ID")%></td>
+            <td><%= rs.getInt("ISBN")%></td>
             <td><%= rs.getString("nome")%></td>
             <td><%= rs.getString("autor")%></td>
             <td><%= rs.getString("editora")%></td>

@@ -7,13 +7,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Alterar Livro</title>
-        <link rel="stylesheet" href="stylecad.css"/>
+        <style>
+            body {
+                margin: 0 auto;
+                text-align: center;
+                font-size: 50px;
+                color: white;
+                margin-top: 50px
+            }
+        </style>
     </head>
     <body> 
        <%
 
-            // Recebendo os parâmetros alterados do formulario carregaprod.jsp 
-            int codigo = Integer.parseInt(request.getParameter("codigo"));
+            // Recebendo os parâmetros alterados do formulario carregalivro.jsp 
+            int isbn = Integer.parseInt(request.getParameter("isbn"));
             String nome = request.getParameter("nome");
             String autor = request.getParameter("autor");
             String editora = request.getParameter("editora");
@@ -30,16 +38,16 @@
                 conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "jojokau8871");
 
                 //alterar os dados na tabela produto do banco de dados //
-                st = conecta.prepareStatement("UPDATE livro SET nome = ?, autor = ?, editora = ?, genero = ?, descricao = ?, preco = ? WHERE codL = ?");
+                st = conecta.prepareStatement("UPDATE livro SET nome = ?, autor = ?, editora = ?, genero = ?, descricao = ?, preco = ? WHERE ISBN = ?");
                 st.setString(1, nome);
                 st.setString(2, autor);
                 st.setString(3, editora);
                 st.setString(4, genero);
                 st.setString(5, descricao);
                 st.setDouble(6, preco);
-                st.setInt(7, codigo);
+                st.setInt(7, isbn);
                 st.executeUpdate(); // Executa o comando sql INSERT
-                out.print("Produto alterado com sucesso!");
+                out.print("Livro alterado com sucesso!");
                 
             } catch (Exception x) {
                 String erro = x.getMessage();

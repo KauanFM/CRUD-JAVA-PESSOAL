@@ -7,13 +7,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            body {
+                margin: 0 auto;
+                text-align: center;
+                font-size: 50px;
+                color: white;
+                margin-top: 30px
+            }
+        </style>
     </head>
     <body>
          <%
 
             //Recebe o código do formulário.
-            int cod;
-            cod = Integer.parseInt(request.getParameter("codigo"));
+            Integer isbn = Integer.parseInt(request.getParameter("isbn"));
 
             //Conexão com o Banco de Dados.
             try {
@@ -21,10 +29,10 @@
                 Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "jojokau8871");
 
                 //Enviando a query para o MySQL e executando.
-                PreparedStatement st = conecta.prepareStatement("DELETE FROM livro WHERE codL = ?");
-                st.setInt(1, cod);
+                PreparedStatement st = conecta.prepareStatement("DELETE FROM livro WHERE ISBN = ?");
+                st.setInt(1, isbn);
                 st.executeUpdate();
-                out.print("Produto excluido com sucesso!");
+                out.print("Livro excluido com sucesso!");
             } catch (Exception x) {
                 String erro = x.getMessage();
                 out.print("Mensagem de erro:" + erro);

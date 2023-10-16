@@ -13,7 +13,7 @@
     <body>
         <%
             //Recebendo o código digitado
-            int cod = Integer.parseInt(request.getParameter("codigo"));
+            int isbn = Integer.parseInt(request.getParameter("isbn"));
 
             try { // Tratamento de Exceções
 
@@ -22,13 +22,13 @@
                 Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "jojokau8871");
 
                 //Busca o produto pelo código recebido
-                PreparedStatement st = conecta.prepareStatement("SELECT * FROM livro WHERE codL = ?");
-                st.setInt(1, cod);
+                PreparedStatement st = conecta.prepareStatement("SELECT * FROM livro WHERE ISBN = ?");
+                st.setInt(1, isbn);
                 ResultSet rs = st.executeQuery();
 
-                //Verifica se o produto de código informado foi encontrado
+                //Verifica se o livro de código informado foi encontrado
                 if (!rs.next()) {
-                    out.print("Produto não encontrado");
+                    out.print("Livro não encontrado");
                 } else {
         %>
         <main>
@@ -36,8 +36,8 @@
                 <form method="post" action="alterar_livros.jsp">
 
 
-                    <label for="codigo">Código:</label>
-                    <input type="number" step="1" name="codigo" id="codigo" value="<%= rs.getInt("codL")%>" readonly>
+                    <label for="isbn">ISBN:</label>
+                    <input type="number" step="1" name="isbn" id="isbn" value="<%= rs.getInt("isbn")%>" readonly>
 
 
 
